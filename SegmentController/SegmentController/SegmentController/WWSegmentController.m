@@ -11,8 +11,8 @@
 
 #define WWCheckData if (!self.menuTextArray.count || !self.subControllers.count) return;
 @interface WWSegmentController ()<UIScrollViewDelegate>
-@property (nonatomic,strong) WWTopMenuView * menuView;
-@property (nonatomic,strong) UIScrollView * segmentScrollView;
+@property (nonatomic, strong) WWTopMenuView * menuView;
+@property (nonatomic, strong) UIScrollView * segmentScrollView;
 @property (nonatomic, assign) NSInteger defaultIndex;
 
 @end

@@ -12,8 +12,8 @@
 @property (nonatomic, strong) UIScrollView *menuScrollView;
 @property (nonatomic, strong) UIButton *preBtn;/** 菜单上个选中的按钮 */
 @property (nonatomic, assign) NSInteger selectIndex;/** 菜单当前选中按钮索引 */
-@property (strong, nonatomic) UIView *animateView;
-@property (weak, nonatomic)   NSLayoutConstraint *animateconstraintLeft;
+@property (nonatomic, strong) UIView *animateView;
+@property (nonatomic, weak)   NSLayoutConstraint *animateconstraintLeft;
 @property (nonatomic, strong) NSArray <NSString *>*menuTextArray;
 @property (nonatomic, strong) UIView *bottomLineView;
 @property (nonatomic, assign) NSInteger maxBtnCountShowInScreen;
@@ -146,7 +146,6 @@
             menuOffsetX += self.preBtn.bounds.size.width;
         }
     }
-    
     
     //6.最大的offsetX
     menuOffsetX = (menuOffsetX > self.maxOffsetXInMenu) ? self.maxOffsetXInMenu : menuOffsetX;

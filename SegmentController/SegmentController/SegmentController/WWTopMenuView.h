@@ -14,10 +14,10 @@
 
 - (void)animateViewWithOffsetX:(CGFloat)offsetX;
 
-@property (assign, nonatomic) CGFloat menuWidth;
+@property (nonatomic, assign) CGFloat menuWidth;
 
-@property (weak, nonatomic) UIScrollView *scollView;
+@property (nonatomic, weak)   UIScrollView *scollView;
 
-@property (nonatomic, copy) void(^clickMenuBlock)(CGFloat offSetX);
+@property (nonatomic, copy)   void(^clickMenuBlock)(CGFloat offSetX);
 
 @end
