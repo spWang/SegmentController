@@ -28,8 +28,8 @@
 - (void)setupDemo {
     WWSegmentController *segmentVC = [[WWSegmentController alloc]initWithDefaultIndex:1];
     segmentVC.subControllers = [self subControllersWithCount:5];
-    segmentVC.menuTextArray = [self menuTitlesWithCount:5];
-    //    segmentVC.maxBtnCountShowInScreen = 4;
+    segmentVC.menuTextArray = [self menuTitlesWithCount:6];
+    //segmentVC.maxBtnCountShowInScreen = 4;
     //一切设置应该放在前边,然后在添加
     [self addChildViewController:segmentVC];
     [self.view addSubview:segmentVC.view];
@@ -54,7 +54,7 @@
     if (!count) return  array;
     
     for (int i =0; i<count; i++) {
-        NSString *str = [@"标题" stringByAppendingString:[NSString stringWithFormat:@"%d",i+1]];
+        NSString *str = [NSString stringWithFormat:@"标题%d",i];
         [array addObject:str];
     }
     

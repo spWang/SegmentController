@@ -22,7 +22,6 @@
 #pragma mark - life cycle
 - (instancetype)initWithDefaultIndex:(NSInteger)defaultIndex {
     if (self = [super init]) {
-        defaultIndex = (defaultIndex == 0) ? 1 : defaultIndex;
         self.defaultIndex = defaultIndex;
     }
     return self;
@@ -32,14 +31,14 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.defaultIndex = self.defaultIndex > self.menuTextArray.count ? 1 : self.defaultIndex;
+    self.defaultIndex = self.defaultIndex > self.menuTextArray.count ? 0 : self.defaultIndex;
     
     WWCheckData
     
     [self setupSubView];
     [self setupFrame];
     
-    if (self.defaultIndex != 1) return;
+    if (self.defaultIndex != 0) return;
     [self.menuView animateViewWithOffsetX:0];
     
 }
@@ -73,7 +72,7 @@
     
     _segmentScrollView.frame = CGRectMake(0, y, w, h);
     _segmentScrollView.contentSize = CGSizeMake(w * self.subControllers.count, 0);
-    _segmentScrollView.contentOffset = CGPointMake((self.defaultIndex - 1)* _segmentScrollView.bounds.size.width, 0);
+    _segmentScrollView.contentOffset = CGPointMake(self.defaultIndex * _segmentScrollView.bounds.size.width, 0);
 }
 
 #pragma mark - UIScrollViewDelegate

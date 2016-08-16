@@ -13,7 +13,7 @@
  */
 @interface WWSegmentController : UIViewController
 #pragma mark - require
-/** 初始化时到哪个位置 1,2,3... */
+/** 初始化时到哪个位置 0,1,2,3... */
 - (instancetype)initWithDefaultIndex:(NSInteger)defaultIndex;
 
 /** 菜单栏文字的数组 */
